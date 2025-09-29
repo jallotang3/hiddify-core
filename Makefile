@@ -33,7 +33,7 @@ headers:
 
 
 android: lib_install
-	gomobile bind -v -androidapi=21 -javapkg=com.lamp -libname=box -tags=$(TAGS) -trimpath -target=android-386,android-arm64 -o $(BINDIR)/$(LIBNAME).aar github.com/sagernet/sing-box/experimental/libbox ./mobile
+	gomobile bind -v -androidapi=21 -javapkg=com.lamp -libname=box -tags=$(TAGS) -trimpath -target=android/amd64,android/arm64 -o $(BINDIR)/$(LIBNAME).aar github.com/sagernet/sing-box/experimental/libbox ./mobile
 
 ios-full: lib_install
 	gomobile bind -v  -target ios,iossimulator,tvos,tvossimulator,macos -libname=box -tags=$(TAGS),$(IOS_ADD_TAGS) -trimpath -ldflags="-w -s" -o $(BINDIR)/$(PRODUCT_NAME).xcframework github.com/sagernet/sing-box/experimental/libbox ./mobile 
